@@ -8,6 +8,8 @@
 ;;; command stats
 
 ;;; Code:
+(require 'cl-lib)
+
 (defvar command-stats--alist '())
 
 (defun command-stats--handler (&optional cmd)
@@ -40,3 +42,7 @@
   (add-hook 'pre-command-hook 'command-stats--handler)
   (message "command-stats restarted")
   )
+
+(provide 'command-stats)
+
+;;; command-stats ends here
